@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "forever-start": "forever start server.js",
+    "forever-start": "forever start server.js ",
     "forever-stop": "forever stop server.js",
+    "forever-restart": "forever restart server.js",
     "forever-list": "forever list",
-    "start": "nohup node server.js 1>data/logs/info.log 2>data/logs/error.log &",
-    "stop": "bin/close_p.sh server.js",
-    "restart": "npm stop >/dev/null 2>&1 & npm start",
     "api": "apidoc -f '.*\\.js$' -e 'node_modules/*' -i ./ -o public/apidoc/"
   },
   "author": "",
