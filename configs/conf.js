@@ -30,4 +30,6 @@ module.exports={
     //用户登陆持续时间
     //一个星期
     loginOfTime:1000*60*60*24*7,
+
+    hooksSecret:"niusantu.319",
 }
