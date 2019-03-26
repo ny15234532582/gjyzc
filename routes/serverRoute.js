@@ -9,6 +9,11 @@ module.exports={
         allRoute.forEach((item)=>{
             require('./'+item)(app);
         });
+
+	//githup webhooks event func
+	app.get('auto_build',function(req,res,next){
+            console.log('nihao,keyilemasdf');
+	});
     }
 }
 
