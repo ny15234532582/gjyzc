@@ -4,7 +4,8 @@ module.exports=function(req,res,next){
     
     let hmac = crypto.createHmac('sha1',configs.hooksSecret);
 
-    hmac.update(Buffer.alloc(JSON.stringify(req.body)));
+    let jsonBody=JSON.stringify(req.body);
+    hmac.update(Buffer.alloc(jsonBody.length,jsonBody));
     let signature = 'sha1=' + hmac.digest('hex');
 
     let _signature = req.headers['x-hub-signature'];
