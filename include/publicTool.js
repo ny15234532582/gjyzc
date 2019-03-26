@@ -120,7 +120,7 @@ function localIP() {
 
 function run_cmd(cmd,args){
 /*{{{*/
-    return new Promise((resolve,reject){
+    return new Promise((resolve,reject)=>{
         let spawn = require('child_process').spawn;
         let child = spawn(cmd, args);
         let resp = "";
