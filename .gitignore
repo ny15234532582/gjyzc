@@ -1,0 +1,14 @@
+#库目录
+**/node_modules
+#琐碎的文件，比如日志，数据库备份
+/data
+
+/package-lock.json
+#用户上传目录
+/public/uploads
+/public/file
+/public/img
+/public/video
+
+#api目录
+/public/apidoc
