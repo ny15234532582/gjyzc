@@ -1,0 +1,38 @@
+{
+  "name": "sakj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "forever-start": "forever start server.js",
+    "forever-stop": "forever stop server.js",
+    "forever-list": "forever list",
+    "start": "nohup node server.js 1>data/logs/info.log 2>data/logs/error.log &",
+    "stop": "bin/close_p.sh server.js",
+    "restart": "npm stop >/dev/null 2>&1 & npm start",
+    "api": "apidoc -f '.*\\.js$' -e 'node_modules/*' -i ./ -o public/apidoc/"
+  },
+  "author": "",
+  "license": "ISC",
+  "apidoc": {
+    "name": "sakj",
+    "version": "1.0.0",
+    "description": "牛三土企业OA系统",
+    "title": "牛三土企业OA管理系统"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-redis": "^3.4.0",
+    "cookie-signature": "^1.1.0",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "forever": "^0.15.3",
+    "formidable": "^1.2.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.8",
+    "socket.io": "^2.2.0",
+    "socket.io-redis": "^5.2.0"
+  }
+}

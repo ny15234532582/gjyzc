@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/server/css/article-folder.css">
+<ul class="crumbNav">
+    <li><a href="">返回上一页</a></li>
+    <li><a href="">首页</a></li>
+    {{#each folderPath}}
+        <li class='crumbSubNav'>{{.}}</li>
+    {{/each}}
+</ul>
+<div class="content">
+    <!--空白处右键-->
+    <div class="rigBtnMenu allrbm">
+        <ul>
+            {{#each rightMenus1}}
+            <li>{{.}}</li>
+            <li class="line"></li>
+            {{/each}}
+        </ul>
+    </div>
+    <!--文件上右键-->
+    <div class="rigBtnMenu filerbm">
+        <ul>
+            {{#each rightMenus2}}
+            <li>{{.}}</li>
+            <li class="line"></li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <ul class="showFilePanel">
+        {{#each lowFolders}}
+            <li class="folder">
+                <i>&#xe64b;</i>
+                <span>{{.}}</span>
+            </li>
+        {{/each}}
+        {{#each artfiles}}
+            <li class="file">
+                <i>&#xe79b;</i>
+                <span>{{.}}</span>
+            </li>
+        {{/each}}
+
+        <div class="rename">
+            <div>
+                <span class="topArrow"/>
+                <label>请输入新的名称</label>
+                <input type="text" />
+                <input type="submit" value="重命名" />
+            </div>
+        </div>
+
+    </ul>
+</div>
+
+<script src="/server/js/folderShow/rightMenuShow.js"></script>
+<script src="/server/js/folderShow/{{cliAction}}.js"></script>

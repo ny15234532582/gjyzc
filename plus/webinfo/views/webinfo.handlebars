@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/plus/webinfo/css/webinfo.css">
+
+<ul class="crumbNav">
+    <li><a href="">返回上一页</a></li>
+    <li><a href="">首页</a></li>
+    {{#each folderPath}}
+        <li class='crumbNav'>{{.}}</li>
+    {{/each}}
+</ul>
+<div class="content">
+    <form method="post" enctype="multipart/form-data" action="/manage/webinfo">
+        <ul>
+            <li>
+                <label for="">网站名称</label>
+                <input type="text" name="webName" value="{{webName}}">
+                <span>*任意字符，控制在255个字符内</span>
+            </li>
+            <li>
+                <label for="">网站LOGO</label>
+                <input type="text" disabled="disabled" 
+                    name="oldlogo" value="{{logo}}">
+                <span class="upfile">
+                    <span>上传...</span>
+                    <input type="file" name="logo">
+                </span>
+            </li>
+            <li>
+                <label for="">公司名称</label>
+                <input type="text" 
+                    name="companyName" value="{{companyName}}">
+                <span></span>
+            </li>
+            <li>
+                <label for="">通讯地址</label>
+                <input type="text" name="address" value="{{address}}">
+                <span></span>
+            </li>
+            <li>
+                <label for="">联系电话</label>
+                <input type="text" name="phone" value="{{phone}}">
+                <span></span>
+            </li>
+            <li>
+                <label for="">绑定域名</label>
+                <input type="text" 
+                    name="domainName" value="{{domainName}}">
+                <span></span>
+            </li>
+        </ul>
+        <div class="contrPanel">
+            <button type="submit">提交保存</button>
+            <button type="reset">复位重填</button>
+        </div>
+    </form>
+</div>
+
+<script src="/plus/webinfo/js/webinfo.js"></script>

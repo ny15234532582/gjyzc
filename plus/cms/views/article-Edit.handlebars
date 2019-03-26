@@ -1,0 +1,55 @@
+<div class='article_edit_panel'>
+    <link rel="stylesheet" href="/plus/cms/css/article-Edit.css">
+    <form action="/manage/artFileChange" enctype="multipart/form-data" method="post">
+        <!--标题图片预览-->
+        <img class="showImg" src="{{titleImg}}"><img>
+        <ul>
+            <li>
+                <label for="">文档标题</label>
+                <input type="" name="title" value="{{title}}">
+                <span></span>
+            </li>
+            <li>
+                <label for="">标题图片</label>
+                <input type="text" disabled="disabled" value="{{titleImg}}">
+                <span class="upfile">
+                    <span>上传...</span>
+                    <input type="file" name="logo" value="{{titleImg}}">
+                </span>
+            </li>
+            <li>
+                <label for="">外部链接</label>
+                <input type="" name='skipLink' value="{{skipLink}}">
+                <span></span>
+            </li>
+            <li>
+                <label for="">模板更换</label>
+                <input type="">
+                <span></span>
+            </li>
+            <li>
+                <label for="">简介</label>
+                <input type="" name='summary' value="{{summary}}">
+                <span></span>
+            </li>
+            <li>
+                <label for="" id="nrbjLabel" contentHtml='{{ArtContent}}'>内容编辑</label>
+                <script type="text/plain" id="myEditor" style="width:950px;height:340px;">
+                    <p>请在此处输入文章...</p>
+                </script>
+            </li>
+        </ul>
+        <div class='subpanel'>
+            <button class="subfalse">关闭</button>
+            <button class="subtrue">提交</button>
+            <button class="subaction iconfont">&#xec6b;</button>
+        </div>
+    </form>
+    <script>
+         window.UEDITOR_HOME_URL = "/plus/cms/uEditorLib/";
+    </script>
+    <script src='/plus/cms/uEditorLib/ueditor.config.js' charset='utf-8'></script>
+    <script src='/plus/cms/uEditorLib/ueditor.all.js' charset='utf-8'></script>
+    <script src='/plus/cms/uEditorLib/lang/zh-cn/zh-cn.js'></script>
+    <script src='/plus/cms/js/artEdit.js'></script>
+</div>

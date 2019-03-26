@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登陆</title>
+    <link rel="stylesheet" href="/server/css/reset.css">
+    <link rel="stylesheet" href="/server/css/login.css">
+</head>
+<body>
+    <div class="content">
+        <img src="server/img/logo.png" alt="">
+        <div>
+            <i class="iconfont">&#xe7af;</i>
+            <input type="text" name="user" value="{{user}}"
+                placeholder="管理员帐号">
+        </div>
+        <div>
+            <i class="iconfont">&#xe7c9;</i>
+            <input type="password" name="password" placeholder="管理员密码">
+        </div>
+        <button class="loginSub">登录</button>
+        <label>
+            <i class="iconfont">&#xe77e;</i>
+            <span class="loginmsg">{{{loginfo}}}</span>
+        </label>
+    </div>
+    <span>
+        版权所有 无锡市思安科技网络有限公司 Copyright © 2009 - 2017 dtcms.net Inc. All Rights Reserved.
+    </span>
+
+    <script src="/lib/js/require.js" 
+        data-main="/server/js/login/config"></script>
+</body>
+</html>

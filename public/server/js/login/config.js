@@ -1,0 +1,19 @@
+require.config({
+    paths:{
+        'jquery':'/lib/js/jquery-1.12.4.min',
+    },
+    shim:{
+        'jquery':{
+            exports:'$'
+        }
+    }
+});
+
+require(['main'],function(){
+    //首次提交，返回提示信息
+    first_log_msg();
+    //表单提交
+    sub_form();
+    //回车键触发表单提交
+    enter_sub_form();
+});

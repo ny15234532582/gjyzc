@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="/server/css/usermanage.css">
+
+<ul class="crumbNav">
+    <li><a href="">返回上一页</a></li>
+    <li><a href="">首页</a></li>
+</ul>
+<div class="content">
+
+    <!--搜索条件-->
+    <div class="filterResult">
+        {{#each searchCondition}}
+        <label for="">{{label}}</label>
+        <input type="{{inputType}}">
+        {{/each}}
+        <button>
+            <i class="iconfont">&#xe646;</i>
+            <span>查询</span>
+        </button>
+    </div>
+
+    <!--批量操作-->
+    <div class="tableHead">
+        <label>{{title}}</label>
+        <div class="btnGroup">
+            {{#each batchOperation}}<button 
+            class="{{class}}">
+                <i class="iconfont">{{{icon}}}</i>
+                <span>{{showName}}</span>
+            </button>{{/each}}
+        </div>
+    </div>
+
+    <!--主要内容显示区域-->
+    <table class="userList" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                {{#each tableTitle}}
+                <th>{{{.}}}</th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each allRow}}
+            <tr>
+                {{#if checkbox}}
+                <td><input type="checkbox"></td>
+                {{/if}}
+
+                {{#if firstcol}}
+                <td class="userName">{{firstcol}}</td>
+                {{/if}}
+
+                {{#if liBtnGroup}}
+                <td class="liBtnGroup">
+                    {{#each liBtnGroup}}
+                        {{{.}}}
+                    {{/each}}
+                </td>
+                {{/if}}
+
+                {{#each colType}}
+                    <td>{{.}}</td>
+                {{/each}}
+
+                {{#if showEnable}}
+                <td>
+                    {{#if enable}}
+                    <i class="status-ok">•</i> 启用 
+                    {{else}}
+                    <i class="status-no">•</i> 停用 
+                    {{/if}}
+                </td>
+                {{/if}}
+
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <!--分页部门-->
+    <div class="tableFood">
+        <span>共计：{{allNumber}}条</span>
+        <select class="OnePagingNum" 
+            defaultopt="{{onepageNum}}">
+            <option>10条/页</option>
+            <option>15条/页</option>
+            <option>20条/页</option>
+        </select>
+        {{#if pageAry}}
+        <ul class="paging">
+            <li class="iconfont pagingfirstNum">&#xe616;</li>
+            <li class="iconfont pagingprevNum">&#xe619;</li>
+            {{#each pageAry}}
+            <li class="pagingNum">{{.}}</li>
+            {{/each}}
+            <li class="iconfont pagingnextNum">&#xe617;</li>
+            <li class="iconfont paginglastNum">&#xe618;</li>
+            <li class="lastLi">
+                跳转至<input type="text">页
+            </li>
+        </ul>
+        {{/if}}
+    </div>
+
+    <!--详细信息-->
+    <div class="userInfoLeft">
+        <div class="title">详情</div>
+        <ul class="cont"></ul>
+    </div>
+</div>
+<!--视图类JS-->
+<script src="/server/js/listView/listView.js"></script>
+<script src="/server/js/listView/{{clientAction}}.js"></script>

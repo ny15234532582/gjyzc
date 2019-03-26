@@ -1,0 +1,19 @@
+<div class="onlineList">
+    <link rel="stylesheet" href="/plus/chatOnline/css/onlineList.css">
+    <!--在线的人员列表-->
+    <ul>
+        {{#each allUser}}
+            <li data-uid="{{userId}}">
+                姓名:{{name}}
+                {{#if logout}}
+                    <span class="logoutTrue">(离线)</span>
+                {{else}}
+                    <span class="logoutFalse">(在线)</span>
+                {{/if}} 
+            </li>
+            <li class="line"></li>
+        {{/each}}
+    </ul>
+
+    <script src="/plus/chatOnline/js/onlineList.js"></script>
+</div>

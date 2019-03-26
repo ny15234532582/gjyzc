@@ -1,0 +1,14 @@
+{
+  "name": "artfolder",
+  "version": "1.0.0",
+  "description": "这是用于组织artfile的目录结构",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ueditor": "^1.2.3"
+  }
+}

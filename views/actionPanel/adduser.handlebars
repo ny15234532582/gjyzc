@@ -1,0 +1,72 @@
+<div class='addUserPanel'>
+    <link rel="stylesheet" href="/server/css/adduser.css">
+
+    <div class="box">
+
+        <!--添加用户-->
+        <span class="addUserTitle">添加用户信息</span
+        ><span class="addUserTitle"> &nbsp;</span>
+
+        <span class="switchback"></span>
+
+        <!--添加用户面板-->
+        <div class="addUserContent">
+            <ul class="addUserBox">
+                <li>
+                    <label for="">用户名</label>
+                    <input type="" name="userName" value="{{userOne.userName}}">
+                </li>
+                <li>
+                    <label for="">姓名</label>
+                    <input type="" name="name" value="{{userOne.name}}">
+                </li>
+                <li>
+                    <label for="">电话</label>
+                    <input type="" name="phone" value="{{userOne.phone}}">
+                </li>
+                <li>
+                    <label for="">邮箱</label>
+                    <input type="" name="Email" value="{{userOne.Email}}">
+                </li>
+                <li>
+                    <label for="">地址</label>
+                    <input type="" name="address" value="{{userOne.address}}">
+                </li>
+                <li>
+                    <label for="">QQ</label>
+                    <input type="" name="qq" value="{{userOne.qq}}">
+                </li>
+                <li>
+                    <label for="">微信</label>
+                    <input type="" name="weixin" value="{{userOne.weixin}}">
+                </li>
+                <li>
+                    <label for="">所属部门和职位</label>
+                    <input type="" name="belongToRole" 
+                        class="roleSelect" value="{{userOne.belongToRole}}">
+                </li>
+            </ul>
+            <div class="roleSelectorBox">
+                <div class="arrow"></div>
+                <ul class="posiSelect">
+                {{#each allPosi}}
+                    <label>{{path}}</label>
+                    <ul>
+                    {{#each posiAry}}
+                        <li>{{.}}</li>
+                    {{/each}}
+                    </ul>
+                {{/each}}
+                </ul>
+            </div>
+
+            <!--动作按钮-->
+            <div class='subpanel'>
+                <button class="subfalse">关闭</button>
+                <button class="subtrue">提交</button>
+                <button class="subaction iconfont">&#xec6b;</button>
+            </div>
+        </div>
+    </div>
+    <script src="/server/js/adduser.js"></script>
+</div>

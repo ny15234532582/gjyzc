@@ -1,0 +1,55 @@
+.onlineList{
+    width:192px;
+    min-height:240px;
+    max-height:240px;
+    background:#fff;
+    border:1px solid #686f7f;
+    box-shadow:0 0 5px #686f7f;
+    padding:10px;
+    overflow-y:auto;
+    color:rgb(104,111,127);
+    font-size:13px;
+    z-index:1;
+}
+
+/*单个菜单项*/
+.onlineList ul>li:not([class~="line"]){
+    border-bottom:1px solid #fff;
+    line-height:28px;
+    cursor:pointer;
+}
+
+/*鼠标移动到元素上，缓慢向右移动*/
+.onlineList ul>li:not([class~="line"])::before{
+    content:'';
+    width:0px;
+    display:inline-block;
+}
+.onlineList ul>li:hover::before{
+    width:20px;
+    transition:width .4s;
+}
+
+/*菜单横线*/
+.onlineList .line{
+    height:1px;
+    position:relative; 
+    background:#686f7f;
+    left:-210px;
+    transition:left .4s;
+}
+.onlineList ul>li:hover + .line{
+    left:0;
+    transition:left .4s;
+}
+
+/*用户在线状态*/
+.onlineList .logoutTrue{
+    color:#bbff0a;
+    font-size:12px;
+}
+.onlineList .logoutFalse{
+    color:#474c38;
+    font-size:12px;
+}
+

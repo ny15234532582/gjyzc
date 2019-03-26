@@ -1,0 +1,15 @@
+{
+  "name": "chatOnline",
+  "version": "1.0.0",
+  "description": "这是sakj系统中用于在线聊天的插件",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "uuid": "^3.3.2"
+  }
+}

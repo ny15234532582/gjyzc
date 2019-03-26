@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=3,minimum-scale=1">
+    <link rel="stylesheet" href="/lib/css/reset.css">
+    <link href="/lib/css/skitter.styles.css" 
+        type="text/css" media="all" rel="stylesheet" />
+    <link media="(min-width:1200px)" rel="stylesheet" href="/server/css/index.css">
+    <link media="(max-width:1200px)" rel="stylesheet" href="/server/css/mobile.css">
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <img src="/server/img/dk6w.png" alt="">
+            <span>
+                <h2>关街屯粮墓室预制有限公司</h2>
+                <h4>T u n L i a n g Y u Z h i P i n</h4>
+            </span>
+        </div> 
+        <nav class="close">
+            <img src="/server/img/navbg.png" 
+                class="openMenu"></a>
+            <a href="/">首页</a>
+            <a href="/detail?path=栏目分类/公司简介/main">公司简介</a>
+            <a href="/list?path=栏目分类/产品中心&page=1">产品中心</a>
+            <a href="/list?path=栏目分类/项目案例&page=1">项目案例</a>
+            <a href="/leaveMsg">在线留言</a>
+            <a href="/detail?path=栏目分类/联系我们&page=1">联系我们</a>
+        </nav>
+    </header> 
+    <content>
+        <div class="banner">
+            <div class="box_skitter box_skitter_large">
+                <ul>
+                    {{#each banner1}}
+                    <li>
+                        <img src="{{url}}" class="{{imgClass}}" />
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="selectBtn">
+                <h1>长子预制墓室行业领军者</h1>
+                <h2>秉承“创新、绩效、和谐、责任”的核心价值观。</h2>
+                <a href="/leaveMsg">在线留言</a>
+            </div>
+        </div>
+        {{{body}}}
+    </content>
+    <footer>
+        <nav>
+            <a href="/detail?path=栏目分类/公司简介/main">公司简介</a>
+            <a href="/list?path=栏目分类/产品中心&page=1">产品中心</a>
+            <a href="/list?path=栏目分类/项目案例&page=1">项目案例</a>
+            <a href="/leaveMsg">在线留言</a>
+            <a href="/detail?path=栏目分类/联系我们&page=1">联系我们</a>
+        </nav>
+        <p>Copyright © 2019-2025 All rights reserved  版权所有 © 关街屯粮预制品有限公司 未经许可 严禁复制</p>
+        <p>晋 ICP备 8765-1号</p>
+    </footer>
+    <script type="text/javascript" 
+        src="/lib/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" language="javascript" 
+        src="/lib/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" language="javascript" 
+        src="/lib/js/jquery.skitter.min.js"></script>
+    <script type="text/javascript" language="javascript" 
+        src="/lib/js/scroll.js"></script>
+    <script type="text/javascript" language="javascript"
+        src="/server/js/main.js"></script>
+</body>
+</html>

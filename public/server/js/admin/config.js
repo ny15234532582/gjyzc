@@ -1,0 +1,25 @@
+require.config({
+    paths:{
+        'jquery':'/lib/js/jquery-1.12.4.min',
+        'ZeroClipboard':'/lib/js/ZeroClipboard.min',
+        'jqueryForm':'/lib/js/jquery.form-3.46.0',
+    },
+    shim:{
+        'jquery':{
+            exports:'$'
+        },
+    }
+});
+
+require(['leftMenuRoute','topMenuRoute','socketRoute','ZeroClipboard','jqueryForm',],
+    function(leftMenuRoute,topMenuRoute,socketRoute,ZeroClipboard,jqueryForm){
+    window['ZeroClipboard']=ZeroClipboard;
+    $(document).ready(function(){
+        //socket初始化
+        socketRoute.socketRoute();
+        //左侧菜单跳转
+        leftMenuRoute(); 
+        //头部菜单动作
+        topMenuRoute();
+    });
+});

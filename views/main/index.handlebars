@@ -1,0 +1,67 @@
+<div class="aboutUs">
+    <div class="title1">
+        <span class="line"></span>
+        <h1>公司简介</h1> 
+        <h3>ABOUT <span>US</span></h3>
+    </div>
+    <ul class="con">
+        <li>
+            <h2>{{{aboutUs1.title}}}</h2>
+            <p>{{{aboutUs1.text}}}</p>
+        </li>
+        <li class="advantage">
+            <h2>我们的优势</h2>
+            <ul>
+                {{#each aboutUs2}}
+                <li>
+                    <img src="{{icon}}" alt="">
+                    <div>
+                        <h4>{{title}}</h4>
+                        {{summary}}
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+        <li>
+            <img src="{{aboutUs3}}" alt="">
+        </li>
+    </ul> 
+    <a class="more" href="/detail?path=栏目分类/公司简介/main">查看更多</a>
+</div>
+
+<div class="ourprojects">
+    <div class="title1">
+        <span class="line"></span>
+        <h1>产品中心</h1> 
+        <h3>OUR <span>PRODUCT</span></h3>
+    </div>
+    <div class="con">
+        {{#each ourProject}}
+        <a href="{{url}}">
+            <img src="{{img}}" alt="">
+            <p class="main">{{summary}}</p>
+            <p>{{title}}</p>
+        </a>
+        {{/each}}
+    </div>
+</div>
+
+<div class="porjectDemo">
+    <div class="title1">
+        <span class="line"></span>
+        <h1>项目案例</h1> 
+        <h3>OUR <span>PROJECT</span></h3>
+    </div>
+    <div class="scroll">
+        <ul>
+            {{#each projectDemo}}
+            <li>
+                <a href="{{url}}">
+                    <img src="{{img}}" alt="{{summary}}">
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

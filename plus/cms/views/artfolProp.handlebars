@@ -1,0 +1,110 @@
+<div class='article_edit_panel'>
+    <link rel="stylesheet" 
+        href="/plus/cms/css/artfolProp.css">
+
+    <div class="box">
+
+        <!--选项栏菜单-->
+        <span class="switchbtn switchinfo">文件夹信息</span
+        ><span class="switchbtn switchauth">文件夹权限</span>
+
+        <span class="switchback"/>
+
+        <!--选项栏面板1-->
+        <div class="switchPanel folderInfo">
+            <ul>
+                <li>
+                    <label for="">栏目名称</label>
+                    <input type="" name="title" 
+                        value="{{artfolderName}}" disabled="disabled">
+                </li>
+                <li>
+                    <label for="">创建时间</label>
+                    <input type="" name="title"
+                        value="{{createDate}}" disabled="disabled">
+                </li>
+                <li>
+                    <label for="">创建作者</label>
+                    <input type="" name="title"
+                        value="{{createUser}}" disabled="disabled">
+                </li>
+                <li>
+                    <label for="">子栏目数量</label>
+                    <input type="" name="title" 
+                        value="共{{childFolderNumber}}个子栏目" disabled="disabled">
+                </li>
+                <li>
+                    <label for="">子文档数量</label>
+                    <input type="" name="title" 
+                        value="共{{childArtNumber}}篇文章" disabled="disabled">
+                </li>
+                <li>
+                    <label for="">总文档数量</label>
+                    <input type="" name="title"
+                        value="共{{allchildArtNumber}}篇文章" disabled="disabled">
+                </li>
+            </ul>
+        </div>
+
+        <!--选项栏面板2-->
+        <form class="switchPanel folderauth">
+            <ul>
+                <li>
+                    <label for="">职位选择</label>
+                    <div class="selectList">
+                        <input name="userGroup" readonly="readonly">
+                        <ul>
+                            {{#each allposi}}
+                                <li>{{.}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <label for="">禁止访问</label>
+                    <input name='accessBarred' readonly="readonly">
+                </li>
+                <li>
+                    <label for="">查看文件</label>
+                    <input name='viewArt' readonly="readonly">
+                </li>
+                <li>
+                    <label for="">创建和删除</label>
+                    <input name='createOrDelete' readonly="readonly">
+                </li>
+                <li>
+                    <label for="">审核文件</label>
+                    <input name='examineAndVerify' readonly="readonly">
+                </li>
+            </ul>
+        </form>
+
+        <!--动作按钮-->
+        <div class='subpanel'>
+            <button class="subfalse">关闭</button>
+            <button class="subtrue">提交</button>
+            <button class="subaction iconfont">&#xec6b;</button>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            var nowtabbtn=null;
+            /*菜单特效*/
+            $('.switchbtn').on('click',function(event){
+                $('.switchbtn').removeClass('active');
+                $(this).addClass('active');
+                nowtabbtn=$(this); });
+
+            $('.switchbtn').on('mouseover',function(event){
+                if(nowtabbtn){
+                    nowtabbtn.removeClass('active');
+                    $(this).one('mouseout',function(event){
+                        nowtabbtn.addClass('active'); }); } });
+
+        });
+    </script>
+    <script src='/plus/cms/js/artfolProperty.js'></script>
+</div>

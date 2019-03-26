@@ -1,0 +1,43 @@
+<div class='chatOnlinePage'>
+    <link rel="stylesheet" href="/plus/chatOnline/css/chatOnlinePage.css">
+
+    <div class="box">
+
+        <!--聊天面板-->
+        <span class="chatOnlineTitle">与{{toName}}的聊天面板</span
+        ><span class="chatOnlineTitle"> &nbsp;</span>
+
+        <span class="switchback"></span>
+
+        <!--聊天面板-->
+        <div class="chatOnlineContent" data-uid="{{userId}}">
+            <ul class="chatOnlineShow">
+                {{#each allmsg}}
+                <li {{#if isMy}}class="my"{{/if}}>
+                    {{userName}}:{{msg}}
+                </li>
+                {{/each}}
+            </ul>
+
+            <div class="chatOnlineSend">
+                <textarea autofocus="true" name="chatOnlineText">
+                </textarea>
+
+                <!--动作按钮-->
+                <div class='subpanel'>
+                    <button class="subfalse">关闭</button>
+                    <button class="subtrue">提交</button>
+                    <button class="subaction iconfont">&#xec6b;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/plus/chatOnline/js/chatOnlinePage.js"></script>
+    <script>
+        //将聊天拖到最底层
+        var scrollHeight = 
+            $('.chatOnlineShow').prop("scrollHeight")+500;
+        $('.chatOnlineShow').animate(
+            {scrollTop:scrollHeight},1);
+    </script>
+</div>

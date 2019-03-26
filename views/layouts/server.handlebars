@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理中心</title>
+    <link rel="stylesheet" href="/server/css/reset.css">
+</head>
+<body>
+    <header>
+       <img src="/server/img/logo.png" alt="">
+       <i class="iconfont">&#xe608;</i>
+       <ul class="topMenu">
+           <li href="">在线人员</li>
+           <li href="">控制面板</li>
+       </ul>
+       <div class="userInfo">
+            <i class="iconfont">&#xe7af;</i>
+            <p class="userName">你好，{{user.name}}</p>
+            <p class="userposi">{{user.position.name}}</p>
+            <span class="iconfont">&#xe638;</span>
+            <ul>
+                <li><a href="/">预览网站</a></li>
+                <li><a href="/manage/admin">管理中心</a></li>
+                <li><a href="/">修改密码</a></li>
+                <li><a href="/manage/logout">注销登陆</a></li>
+            </ul>
+       </div>
+    </header>
+
+    <nav>
+        <label>控制面板</label>
+        <ul>
+            <li>
+                <label class="oneLevel">站点信息</label>
+                <ul> </ul>
+            </li>
+            <li>
+                <label class="oneLevel">栏目分类</label>
+                <ul>
+                    {{#each lowFolders}}
+                    <li>
+                        <label class="twoLevel">{{.}}</label>
+                    <li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li>
+                <label class="oneLevel">组织机构</label>
+                <ul>
+                    <li>
+                        <label class="twoLevel">部门管理</label>
+                        <ul> </ul>
+                    </li>
+                    <li>
+                        <label class="twoLevel">用户管理</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label class="oneLevel">日志系统</label>
+                <ul>
+                    <li>
+                        <label class="twoLevel">系统操作</label>
+                    </li>
+                    <li>
+                        <label class="twoLevel">系统错误</label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        {{{body}}}
+    </main>
+    <ul class='message'></ul>
+
+    <script src="/lib/js/require.js" 
+        data-main="/server/js/admin/config"></script>
+
+</body>
+</html>

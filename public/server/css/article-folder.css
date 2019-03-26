@@ -1,0 +1,159 @@
+.showFilePanel{
+    min-height:100%;
+    position:relative;
+}
+/*右键菜单*/
+.rigBtnMenu{
+    width:90px;
+    background:#fff;
+    position:fixed;
+    top:90px;
+    left:200px;
+    border:1px solid #686f7f;
+    padding:10px;
+    cursor:pointer;
+    box-shadow:0 0 5px #686f7f;
+    display:none;
+    z-index:1;
+}
+.rigBtnMenu ul{
+    margin:0 auto;
+    overflow:hidden;
+    cursor:pointer;
+    font-size:13px;
+    color:#686f7f;
+}
+.rigBtnMenu ul > li:not([class~="line"]){
+    line-height:28px;
+}
+.rigBtnMenu li:before{
+    content:'';
+    display:inline-block;
+    width:0;
+    transition:width .4s;
+}
+.rigBtnMenu li:hover::before{
+    content:'';
+    display:inline-block;
+    width:10px;
+    transition:width .4s;
+}
+.rigBtnMenu li:hover + .line{
+    left:0;
+    transition:left .4s;
+}
+.rigBtnMenu .line{
+    height:1px;
+    background:#686f7f;
+    position:relative;
+    left:-90px;
+    transition:left .4s;
+}
+
+/*文件夹选项*/
+.showFilePanel li{
+    display:inline-block;
+    margin:5px;
+    cursor:pointer;
+}
+.showFilePanel li:hover{
+    color:#267cbc;
+}
+.showFilePanel li > i{
+    display:block;
+    font-family:'iconfont';
+    font-size:100px;
+    font-style:normal;
+}
+.showFilePanel li > span{
+    width:100%;
+    max-width:100px;
+    display:block;
+    margin-left:5px;
+    font-size:14px;
+    text-align:center;
+    padding-right:4px;
+    overflow:hidden;
+    height:16px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.showFilePanel .folder{
+    color:#686f7f;
+}
+.showFilePanel .file{
+    color:#00FFFF;
+}
+
+/*面包屑导航*/
+main .crumbNav{
+    cursor:pointer;
+}
+main .crumbNav li:hover{
+    color:#2a72c5;
+}
+
+/*文件重命名*/
+main .rename{
+    width:302px;
+    height:122px;
+    position:absolute;
+    top:0px; 
+    overflow:hidden;
+    z-index:-1;
+}
+main .rename.show{
+    z-index:2;
+}
+main .rename.show div{
+    bottom:0px;
+    opacity:1;
+    transition:bottom .5s,opacity .5s;
+}
+main .rename div{
+    width:270px;
+    height:70px;
+    padding:15px;
+    border:1px solid #00FFFF;
+    border-radius:3px;
+    background-color:#CCFFFF;
+    position:absolute;
+    bottom:50px;
+    opacity:0;
+}
+main .rename .topArrow{
+    content:'';
+    width:0;
+    height:0;
+    border-width:0 20px 20px;
+    border-style:solid;
+    border-color:transparent transparent #00FFFF;
+    position:absolute;
+    left:50%;
+    top:-20px;
+    margin-left:-20px;
+}
+main .rename label{
+    display:block;
+    line-height:30px;
+    font-size:14px;
+    color:#696f7f;
+    margin-bottom:5px;
+}
+main .rename input:nth-of-type(1){
+    width:180px;
+    height:26px;
+    vertical-align:bottom;
+    padding:0 5px;
+}
+main .rename input[type="submit"]{
+    width:70px;
+    height:30px;
+    border:1px solid #267cb7;
+    vertical-align:bottom;
+    background:#267cb7;
+    color:#fff;
+    font-size:12px;
+    border-radius:1px;
+}

@@ -1,0 +1,31 @@
+<div class="listCon">
+    <nav class="leftMenu">
+        <a href="#">{{listTitle}}</a>
+        <a href="/detail?path=栏目分类/公司简介/main">公司简介</a>
+        <a href="/list?path=栏目分类/产品中心&page=1">产品中心</a>
+        <a href="/list?path=栏目分类/项目案例&page=1">项目案例</a>
+        <a href="/leaveMsg">在线留言</a>
+        <a href="/detail?path=栏目分类/联系我们&page=1">联系我们</a>
+    </nav>
+    <div>
+        <ul class="navCrum">
+            <li><a href="">首页</a></li>
+            {{#each crum}}
+            <li>{{.}}</li>
+            {{/each}}
+        </ul>
+        <p class="line"></p>
+        <div class="detail">
+            <h1 class="title">{{title}}</h1>
+            <p class="title2">发布时间: {{date}}</p>
+            {{#if summary}}
+            <div class="introduction">
+                {{summary}}
+            </div>
+            {{/if}}
+            <div class="detailText">
+                {{{artContent}}}
+            </div>
+        </div>
+    </div>
+</div>

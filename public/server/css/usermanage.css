@@ -1,0 +1,221 @@
+main{
+    padding-bottom:0;
+}
+.content{
+    position:relative;
+    font-size:14px;
+    color:#686f7f;
+}
+/* 过滤结果 */
+.content .filterResult{
+    line-height:50px;
+    border-bottom:1px solid #ccc;
+    margin-bottom:10px;
+}
+.filterResult label{
+    margin:0 5px 0 20px;    
+}
+.filterResult input[type=text]{
+    width:120px;
+}
+.filterResult button{
+    margin-left:100px;
+    width:90px;
+    height:26px;
+    background-color:#277cb7;
+    border:0;
+    border-radius:3px;
+    color:#fff;
+}
+.filterResult button .iconfont{
+    font-size:15px;
+    vertical-align:middle;
+}
+
+/* 表格头部 */
+.content .tableHead{
+    line-height:50px;
+}
+.tableHead label{
+    border-right:2px solid #277cb7;
+    margin-left:10px;
+    width:67px;
+    display:inline-block;
+    height:17px;
+    vertical-align:middle;
+    line-height:17px;
+}
+
+.tableHead .btnGroup{
+    float:right;
+}
+.tableHead button{
+    width:90px;
+    height:26px;
+    background-color:#fff;
+    border:1px solid #277cb7;
+    border-radius:3px;
+    color:#277cb7;
+    margin:0 3px;
+    cursor:pointer;
+}
+.tableHead button:hover i{
+    font-size:15px;
+}
+.tableHead button i{
+    display:inline-block;
+    font-size:12px;
+    vertical-align:middle;
+    width:15px;
+}
+.tableHead button.Enableleft{
+    width:60px;
+    margin-right:0;
+    border-right:0;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+}
+.tableHead button.Enableright{
+    width:60px;
+    margin-left:0;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+}
+.tableHead button.add{
+    background-color:#277cb7;
+    color:#fff;
+    border:0;
+}
+
+/* 表格 */
+.content .userList{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+}
+.userList th,
+.userList td{
+    height:38px;
+    font-weight:normal;
+}
+.userList tr{
+    border-bottom:1px solid #ece3e3;
+}
+.userList thead{
+    background:#f7eded;
+}
+.userList tr:hover{
+    background:#f7eded;
+}
+.userList .userName{
+    white-space:nowrap;
+    padding:0 5px;
+}
+.userList .liBtnGroup{
+    width:5%;
+}
+.userList .liBtnGroup .iconfont{
+    display:none; 
+    width:20px;
+    color: #277cb7;
+}
+.userList .status-ok{
+    color:#e4e426;
+    font-weight:bold;
+    font-size:17px;
+}
+.userList .status-no{
+    color:red;
+    font-weight:bold;
+    font-size:17px;
+}
+
+/*表格底部*/
+.tableFood .paging{
+    float:right;
+}
+.tableFood>span,
+.tableFood>select{
+    margin:10px 3px;
+}
+.tableFood>select{
+    background:#fff;
+    color:#648c83;
+    width:70px;
+    height:20px;
+}
+.paging li{
+    float:left;
+    padding:2px 6px;
+    margin:10px 3px;
+}
+.paging .pagingfirstNum,
+.paging .pagingprevNum,
+.paging .pagingnextNum,
+.paging .paginglastNum,
+.paging .pagingNum{
+    border:1px solid #ece3e3;
+    cursor:pointer;
+}
+.paging .pagingfirstNum:hover,
+.paging .pagingfirstNum.active,
+.paging .pagingprevNum:hover,
+.paging .pagingprevNum.active,
+.paging .pagingnextNum:hover,
+.paging .pagingnextNum.active,
+.paging .paginglastNum:hover,
+.paging .paginglastNum.active,
+.paging .pagingNum:hover,
+.paging .pagingNum.active{
+    background:#277cb7;
+    color:#fff;
+}
+.paging input{
+    width:40px;
+    margin:0 5px;
+}
+.paging .lastLi{
+    padding:0;
+}
+
+/*用户信息*/
+.content .userInfoLeft{
+    width:0;
+    height:100%;
+    position:absolute;
+    top:0;
+    right:0;
+    background:#fff;
+    transition:all .5s;
+    overflow:hidden;
+}
+.userInfoLeft.open{
+    width:270px;
+    border-left:1px solid #ccc;
+    box-shadow:-3px 0 5px #ccc;
+    transition:all .5s;
+}
+
+/*用户信息头部*/
+.userInfoLeft .title{
+    width:65px;
+    height:15px;
+    font-weight:bold;
+    margin:10px 0 10px 15px;
+    line-height:15px;
+    border-right:3px solid #277cb7;
+}
+
+/*用户信息主体*/
+.userInfoLeft .cont{
+    border-top:1px solid #d8aeae;
+    padding-top:10px;
+}
+.userInfoLeft li{
+    width:240px;
+    min-height:24px;
+    border-bottom:1px dashed;
+    margin:0 10px;
+    padding:5px;
+    line-height:24px;
+}

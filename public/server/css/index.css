@@ -1,0 +1,460 @@
+body{
+    color:rgb(67,67,67);
+}
+
+header{
+    width:1200px;
+    height:85px;
+    padding:0 calc(50vw - 600px);
+    background-color:rgba(22,16,15,0.5);
+    position:fixed;
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;
+    color:rgb(255,255,255);
+    z-index:100;
+}
+header .logo{ 
+    height:56px;
+    display:flex;
+}
+header .logo img{
+    height:56px;
+}
+header .logo span{
+    margin-top:5px;
+}
+header .logo span h2,
+header .logo span h4{
+    margin:0;
+    text-align:justify;
+}
+header .logo span h4:after{
+    content:'';
+    display:inline-block;
+    width:100%;
+}
+
+header nav{
+    width:800px;
+    display:flex;
+    height:85px;
+}
+header nav .openMenu,
+header nav .closeMenu{
+    display:none;
+}
+header nav a{
+    flex-grow:1;
+    text-align:center;
+    line-height:85px;
+}
+header nav a:hover{
+    background:#c5a47e;
+}
+
+.banner{
+    position:relative;
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    color:#000;
+}
+.banner .box_skitter_large{
+    width:100vw;
+    height:100vh;
+}
+.banner img{
+    width:100vw;
+}
+.banner .selectBtn{
+    position:relative;
+    top:-100vh;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:100;
+    text-shadow:2px 2px 0 #c1a27d;
+}
+.banner .selectBtn h1{
+    font-size:80px;
+    margin:0;
+}
+.banner .selectBtn h2{ 
+    font-size:30px;
+    margin:35px;
+}
+.banner .selectBtn a{ 
+    background:#c5a47e;
+    padding:15px 65px;
+    border-radius:40px;
+    font-size:25px;
+    color:#fff;
+}
+.aboutUs{
+    width:1200px;
+    margin:0 auto;
+}
+
+/******标题{{{********/
+.title1{
+    text-align:center; 
+    margin:60px 0 20px;
+}
+.title1>*{
+    margin:0;
+}
+.title1 .line{
+    width:360px;
+    margin:0 auto;
+    display:block;
+    height:4px;
+    position:relative;
+    top:22px;
+    z-index:-1;
+    background-image:url('../img/line02.png');
+}
+.title1 h1{
+    text-align:center; 
+    display:inline;
+    background:#fff;
+    padding:0 20px;
+}
+.title1 h3{
+    font-weight:200;
+    font-size:17px;
+}
+.title1 h3 span{
+    color:#c5a47e;  
+}
+/******标题}}}********/
+
+.aboutUs .con{ 
+    display:flex;
+    box-sizing:border-box;
+    font-size:12px;
+    line-height:24px;
+}
+.aboutUs .con li{ 
+    width:33.3333%;
+}
+.aboutUs .con h2{ 
+    font-size:20px;
+}
+
+.aboutUs .advantage{ 
+    margin-left:60px;
+    margin-right:60px;
+}
+.aboutUs .con li.advantage li{ 
+    width:100%;
+    position:relative;
+    height:100px;
+    display:flex;
+    align-items:center;
+}
+.aboutUs .advantage img{ 
+    width:56px;
+    display:inline;
+}
+.aboutUs .advantage div{ 
+    line-height:18px;
+    padding:20px;
+}
+.aboutUs .advantage h4{ 
+    font-size:16px;
+    margin:6px 0;
+}
+.aboutUs .con>li:last-Child img{
+    width:380px;
+    height:370px;
+}
+.aboutUs .more{
+    display:block;
+    margin:20px auto;
+    background:#c1a27d;
+    width:180px;
+    height:50px;
+    line-height:50px;
+    font-size:18px;
+    border-radius:22px;
+    color:#fff;
+    text-align:center;
+}
+
+.ourprojects{
+    width:1200px;
+    margin:0 auto;
+}
+.ourprojects .con{ 
+    display:flex;
+    flex-wrap:wrap;
+}
+.ourprojects .con a{ 
+    width:calc(33.3333% - 20px);
+    border:1px solid rgb(238,238,238);
+    box-sizing:border-box;
+    margin-top:20px;
+    padding:12px;
+    text-align:center;
+    font-size:14px;
+}
+.ourprojects .con a:hover{ 
+    border-color:red;
+}
+.ourprojects .con a:nth-of-type(3n-1){
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.ourprojects img{ 
+    width:100%;
+}
+.ourprojects p.main{ 
+    color:#c5a47e;  
+    line-height:28px;
+}
+
+.porjectDemo .scroll{
+    overflow:hidden;
+    width:1200px;
+    margin:0 auto;
+}
+.porjectDemo ul{
+    display:flex;
+}
+.porjectDemo ul li{
+}
+.porjectDemo ul li img{
+    width:250px;
+    height:250px;
+    margin:20px;
+}
+
+footer{
+    margin-top:30px;
+    background:#383838;
+    text-align:center;
+    color:#fff;
+    padding:20px;
+    font-size:13px;
+}
+footer>*{
+    padding:7px 0 0;
+}
+footer nav{
+    display:flex;
+    justify-content:center; 
+}
+footer nav a{
+    line-height:14px;
+    padding:0 10px;
+}
+footer nav a+a{
+    border-left:1px solid ;
+}
+
+/*列表页***********************/
+
+.listCon{
+    width:1200px;
+    margin:0 auto;
+    position:relative;
+    display:flex;
+}
+.listCon .leftMenu{
+    margin-top:-65px;
+}
+.listCon .leftMenu a{
+    width:160px;
+    margin:7px 0 0;
+    background:rgb(52,52,52);
+    color:#fff;
+    text-align:center;
+    line-height:50px;
+}
+.listCon .leftMenu a:hover{
+    background:#c5a47e;
+}
+
+.listCon .leftMenu a:first-of-type{
+    background:#c5a47e;
+    font-size:24px;
+    line-height:116px;
+    margin-bottom:13px;
+}
+.listCon .leftMenu a:first-of-type::after{
+    content:'';
+    display:block;
+    width:50px;
+    height:2px;
+    background:white;
+    position:relative;
+    top:-37px;
+    left:32px;
+}
+.listCon>div{
+    width:calc(1200px - 180px);
+    margin:14px 0 0 14px;
+}
+.listCon .navCrum li{
+    display:inline-block;
+    line-height:30px;
+    font-size:13px;
+}
+.listCon .navCrum li a{
+    display:inline-block;
+}
+.listCon .navCrum li+li:before{
+    content:'>> ';
+    display:inline-block;
+    margin:0 4px;
+}
+
+.listCon .line{
+    height:4px;
+    background-image:url('../img/line02.png');
+}
+.listCon .titleList li{
+    border-bottom:1px dotted #b4b4b4;
+    display:flex;
+}
+.listCon .titleList .date{
+    width:66px;
+    height:66px;
+    margin:20px;
+    background:#c5a47e;
+    color:#fff;
+    padding:6px 0 0;
+    text-align:center;
+    box-sizing:border-box;
+}
+.listCon .titleList .date h1{
+    margin:0;
+    font-size:29px;
+    
+}
+.listCon .titleList .date h2{
+    margin:0;
+    font-size:17px;
+}
+.listCon .titleList .artTitle{
+    margin:15px; 
+}
+.listCon .titleList a{
+    font-size:20px;
+    margin:10px 0;
+}
+.listCon .pagelist{
+    font-size:13px; 
+    margin:10px auto;
+    display:block;
+    text-align:center;
+}
+.listCon .pagelist li{
+    display:inline-block;
+    border:1px solid #c5a47e;
+    min-width:15px;
+    text-align:center;
+    padding:1px;
+    margin:3px;
+}
+.listCon .pagelist li:first-child{
+    border:0;
+}
+
+/**详情页*********/
+.detail{
+    font-size:13px;
+    line-height:27px;
+}
+.detail img,
+.detail a{
+    display:inline;
+}
+.detail .title{
+    font-size:20px;
+    text-align:center;
+    color:#c5a47e;
+    line-height:34px;
+}
+.detail .title2{
+    text-align:center;
+}
+.detail .introduction{
+    font-size:13px;
+    border:1px solid #e5e5e5;
+    margin:20px 0;
+    background:#f5f5f5;
+    padding:13px;
+}
+
+/***在线留言***********/
+
+.leaveMsg{
+    display:flex;
+}
+.leaveMsg form{
+    display:flex;
+    flex-direction:column;
+    width:40%;
+    padding:20px;
+    box-sizing:border-box;
+}
+.leaveMsg form>*{
+    margin-bottom:10px;
+    height:25px;
+    font-size:13px;
+    line-height:25px;
+}
+.leaveMsg form>input{
+    border-color:red;
+    border:1px solid #c5a47e;
+}
+.leaveMsg form>textarea{
+    min-width:100%;
+    max-width:100%;
+    min-height:80px;
+    max-height:80px;
+    border:1px solid #c5a47e;
+}
+.leaveMsg form>button{
+    background:#c5a47e;
+    color:#fff;
+    height:38px;
+    border:none;
+    margin-top:7px;
+    border-radius:2px;
+    box-sizing:border-box;
+}
+.leaveMsg .contentUs{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+    width:60%;
+    box-sizing:border-box;
+    padding-bottom:54px;
+    line-height:34px;
+    background:url('../img/17.jpg');
+    background-size:100%;
+    color:#000;
+    margin:50px 0 50px 87px;
+    position:relative;
+}
+.leaveMsg .contentUs a{
+    position:absolute;
+    left:-54px;
+    bottom:-22px;
+    background:#c5a47e;
+    padding:25px 50px;
+    color:#fff;
+    box-shadow:rgba(197,164,126,0.5) 0px 5px 10px 0;
+}
+.leaveMsg .contentUs a:hover{
+    background-color:rgba(199,155,105,1);
+}
