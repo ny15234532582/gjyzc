@@ -48,8 +48,31 @@
                 <input type="submit" value="重命名" />
             </div>
         </div>
-
     </ul>
+    <!--分页-->
+    <div class="tableFood">
+        <span>共计：{{allNumber}}条</span>
+        <select class="OnePagingNum" 
+            defaultopt="{{onepageNum}}">
+            <option>10条/页</option>
+            <option>15条/页</option>
+            <option>20条/页</option>
+        </select>
+        {{#if pageAry}}
+        <ul class="paging">
+            <li class="iconfont pagingfirstNum">&#xe616;</li>
+            <li class="iconfont pagingprevNum">&#xe619;</li>
+            {{#each pageAry}}
+            <li class="pagingNum">{{.}}</li>
+            {{/each}}
+            <li class="iconfont pagingnextNum">&#xe617;</li>
+            <li class="iconfont paginglastNum">&#xe618;</li>
+            <li class="lastLi">
+                跳转至<input type="text">页
+            </li>
+        </ul>
+        {{/if}}
+    </div>
 </div>
 
 <script src="/server/js/folderShow/rightMenuShow.js"></script>

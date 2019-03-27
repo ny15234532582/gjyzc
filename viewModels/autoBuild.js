@@ -18,7 +18,7 @@ module.exports=function(req,res,next){
     });
 };
 
-async autoBuildFun(req){
+async function autoBuildFun(req){
 /*同步代码{{{*/
     let hmac = crypto.createHmac('sha1',configs.hooksSecret);
 
