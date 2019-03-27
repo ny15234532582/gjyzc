@@ -23,7 +23,7 @@ async function autoBuildFun(req){
     let hmac = crypto.createHmac('sha1',configs.hooksSecret);
 
     let jsonBody=JSON.stringify(req.body);
-    hmac.update(new Buffer(jsonBody.length,jsonBody));
+    hmac.update(new Buffer(jsonBody));
     let signature = 'sha1=' + hmac.digest('hex');
 
     let _signature = req.headers['x-hub-signature'];
@@ -36,3 +36,4 @@ async function autoBuildFun(req){
     require('child_process').execFileSync(dirlist.binPath+'autoBuild.sh',[dirlist.rootPath]);
 }
 /*同步代码}}}*/
+

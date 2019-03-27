@@ -6,6 +6,8 @@ const rootPath=path.join(__dirname,'../');
 module.exports={
     //根目录
     rootPath:rootPath,
+    //bin目录
+    binPath:path.join(rootPath,'bin/'),
     //插件目录
     plusPath:path.join(rootPath,'plus/'),
     //服务器静态目录
