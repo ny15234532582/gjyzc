@@ -1,7 +1,25 @@
 const crypto = require('crypto');
 
 module.exports=function(req,res,next){
-    
+    autoBuildFun() 
+    .then(()=>{
+        tools.msg({
+            type:'info',
+            msg:'github webhooks同步成功',
+        });
+        res.json({status:'ok'});
+        res.end();
+    },(err)=>{
+        tools.msg({
+            type:'error',
+            msg:'github webhooks匹配失败\n'+err.stack,
+        });
+        next();
+    });
+};
+
+async autoBuildFun(req){
+/*同步代码{{{*/
     let hmac = crypto.createHmac('sha1',configs.hooksSecret);
 
     let jsonBody=JSON.stringify(req.body);
@@ -11,14 +29,10 @@ module.exports=function(req,res,next){
     let _signature = req.headers['x-hub-signature'];
 
     if(_signature != signature){
-        tools.msg({
-            type:'error',
-            msg:'github webhooks匹配失败',
-        });
-        return res.end()
+        throw new Error('同步失败，因为没有匹配成功\n'+
+            signature+'\n'+_signature);
     }
-    tools.run_cmd('sh',[dirlist.binPath+'autoBuild.js',dirlist.rootPath]);
-
-    res.json({status:'ok'});
-    res.end();
-};
+    //同步代码
+    require('child_process').execFileSync(dirlist.binPath+'autoBuild.sh',[dirlist.rootPath]);
+}
+/*同步代码}}}*/
