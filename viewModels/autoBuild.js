@@ -23,7 +23,7 @@ async function autoBuildFun(req){
     let hmac = crypto.createHmac('sha1',configs.hooksSecret);
 
     let jsonBody=JSON.stringify(req.body);
-    hmac.update(Buffer.alloc(jsonBody.length,jsonBody));
+    hmac.update(new Buffer(jsonBody.length,jsonBody));
     let signature = 'sha1=' + hmac.digest('hex');
 
     let _signature = req.headers['x-hub-signature'];
