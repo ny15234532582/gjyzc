@@ -6,7 +6,6 @@
   "scripts": {
     "forever-start": "forever start server.js ",
     "forever-stop": "forever stop server.js",
-    "forever-restart": "forever restart server.js",
     "forever-list": "forever list",
     "api": "apidoc -f '.*\\.js$' -e 'node_modules/*' -i ./ -o public/apidoc/"
   },
