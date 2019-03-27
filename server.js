@@ -23,7 +23,7 @@ let server = app.listen(configs.serverPort,
     function(){
     tools.msg({
         type:'info',
-        msg:'启动服务1器,地址:http://'+tools.localIP()+
+        msg:'启动服务器,地址:http://'+tools.localIP()+
             ':'+configs.serverPort
     });
 });
