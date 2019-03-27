@@ -33,7 +33,7 @@ async function autoBuildFun(req){
             signature+'\n'+_signature);
     }
     //同步代码
-    require('child_process').execFileSync(dirlist.binPath+'autoBuild.sh',[dirlist.rootPath]);
+    require('child_process').execFile(dirlist.binPath+'autoBuild.sh',[dirlist.rootPath]);
 }
 /*同步代码}}}*/
 

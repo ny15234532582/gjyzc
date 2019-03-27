@@ -10,6 +10,4 @@ echo "pulling source code..."
 git fetch --all && git reset --hard gjyzc/master && git pull
 echo "changing permissions..."
 chown -R $WEB_USER:$WEB_USERGROUP $WEB_PATH
-npm run forever-stop
-npm run forever-start
 echo "Finished."
