@@ -1,9 +1,6 @@
 const fs=require('fs');
 const childProcess=require('child_process');
 
-//初始化图片上传路径
-fs.existsSync(configs.imgUpdataPath) || 
-    fs.mkdirSync(configs.imgUpdataPath);
 //初始化views/plus路径
 fs.existsSync(dirlist.viewPath+'plus') || 
     fs.mkdirSync(dirlist.viewPath+'plus');

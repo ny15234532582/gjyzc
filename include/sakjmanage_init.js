@@ -27,6 +27,7 @@ module.exports=function(app){
     app.set('port', configs.serverPort);
     //静态目录
     app.use(express.static(dirlist.staticPath));
+
     //设置插件的静态目录，以/plus/插件目录名称为前缀
     plusPublic(app);
     
@@ -46,6 +47,10 @@ module.exports=function(app){
         cookie:{maxAge:configs.loginOfTime},
         store:redisStoreVar,
     }));
+
+    //初始化图片上传路径
+    fs.existsSync(configs.imgUpdataPath) || 
+        fs.mkdirSync(configs.imgUpdataPath);
 }
 
 async function plusPublic(app){
